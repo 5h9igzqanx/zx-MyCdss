@@ -20,9 +20,6 @@ def judge_z(input_zz):
         else:
             print("∟",input_zz, "okay")
         time.sleep(0.5)
-    #elif input_zz == "cmd":
-    #    print()
-    #    os.system("cmd")
     elif input_zz == "a":
         print("∟ aassxsw114514")
         input_z()
