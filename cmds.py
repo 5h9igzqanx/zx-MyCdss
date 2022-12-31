@@ -4,7 +4,7 @@
 # If you have customized a command, please add it here. However, you cannot modify (not create) the code in any case!!!
 
 
-import time,os
+import time,os,sys
 import commands.default as z_sys
 import commands.user_custom as z_user
 import docs.help as z_sys_hp
@@ -22,26 +22,21 @@ def input_z():
     judge_z(input_zz)
 def judge_z(input_zz):
     if input_zz == "":
-        input_z()
-    elif input_zz == "exit" or input_zz == "退出":
+        pass
+    elif input_zz == "exit" or input_zz == "bye" or input_zz == "退出":
         z_sys.exit(input_zz=input_zz)
     elif input_zz == "Help" or input_zz == "help":
         z_sys_hp.z_help()
     elif input_zz == "a":
         z_sys.a()
-        input_z()
     elif input_zz == "b":
         z_sys.b()
-        input_z()
     elif input_zz == "c":
         z_sys.c()
-        input_z()
     elif input_zz == "d":
         z_sys.d()
-        input_z()
     elif input_zz == "e":
         z_sys.e()
-        input_z()
     else:
         z_sys.no_command()
-        input_z()
+    input_z()

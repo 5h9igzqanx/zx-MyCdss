@@ -4,7 +4,7 @@
 
 
 # imports
-import time,os
+import time,os,sys
 # ========================
 # special symbols
 
@@ -34,10 +34,11 @@ def exit(input_zz):
         time.sleep(0.5)
     elif input_zz == "pause":
         print("paused")
-        os.system("pause")
+        time.sleep(0.5)
     else:
         print("∟",input_zz, "okay")
         time.sleep(0.5)
+    sys.exit(0)
 # =============================================================
 # F
 
