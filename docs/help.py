@@ -19,6 +19,7 @@ def hp_jduge(hp_input):
             print("∟     The above is the content of the help document.")
             f.close()
         docs()
+        z_help_input()
     elif hp_input == "exit" or hp_input == "退出":
         exitcmd = r"cd . && python main.py"
         os.system(exitcmd)
@@ -28,4 +29,4 @@ def hp_jduge(hp_input):
             print("∟     These commands are for testing. You can understand them as placeholders.")
             print("∟     Actually, I haven't figured out what commands to write.")
             print("∟     lol")
-    z_help_input()
+        z_help_input()

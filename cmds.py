@@ -27,16 +27,58 @@ def judge_z(input_zz):
         z_sys.exit(input_zz=input_zz)
     elif input_zz == "Help" or input_zz == "help":
         z_sys_hp.z_help()
-    elif input_zz == "a":
+    elif input_zz == "A" or input_zz == "a":
         z_sys.a()
-    elif input_zz == "b":
+    elif input_zz == "B" or input_zz == "b":
         z_sys.b()
-    elif input_zz == "c":
+    elif input_zz == "C" or input_zz == "c":
         z_sys.c()
-    elif input_zz == "d":
+    elif input_zz == "D" or input_zz == "d":
         z_sys.d()
-    elif input_zz == "e":
+    elif input_zz == "E" or input_zz == "e":
         z_sys.e()
+    elif input_zz == "F" or input_zz == "f":
+        z_sys.f()
+    elif input_zz == "G" or input_zz == "g":
+        z_sys.g()
+    elif input_zz == "H" or input_zz == "h":
+        z_sys.h()
+    elif input_zz == "I" or input_zz == "i":
+        z_sys.i()
+    elif input_zz == "J" or input_zz == "j":
+        z_sys.j()
+    elif input_zz == "K" or input_zz == "k":
+        z_sys.k()
+    elif input_zz == "L" or input_zz == "l":
+        z_sys.l()
+    elif input_zz == "M" or input_zz == "m":
+        z_sys.m()
+    elif input_zz == "N" or input_zz == "n":
+        z_sys.n()
+    elif input_zz == "O" or input_zz == "o":
+        z_sys.o()
+    elif input_zz == "P" or input_zz == "p":
+        z_sys.p()
+    elif input_zz == "Q" or input_zz == "q":
+        z_sys.q()
+    elif input_zz == "R" or input_zz == "r":
+        z_sys.r()
+    elif input_zz == "S" or input_zz == "s":
+        z_sys.s()
+    elif input_zz == "T" or input_zz == "t":
+        z_sys.t()
+    elif input_zz == "U" or input_zz == "u":
+        z_sys.u()
+    elif input_zz == "V" or input_zz == "v":
+        z_sys.v()
+    elif input_zz == "W" or input_zz == "w":
+        z_sys.w()
+    elif input_zz == "X" or input_zz == "x":
+        z_sys.x()
+    elif input_zz == "Y" or input_zz == "y":
+        z_sys.y()
+    elif input_zz == "Z" or input_zz == "z":
+        z_sys.z()
     else:
         z_sys.no_command()
     input_z()
