@@ -1,10 +1,7 @@
 import time,os,sys,wget
 def update():
-    v = open("package\\version.txt","r",encoding="utf-8")
-    ver = v.readlines
-    old_ver = ver[0]
+    old_ver = "0.1.4-beta"#version
     wget.download("https://5h9igzqanx.github.io/project-version/version/zx-MyCdss.txt")
-    v.close()
     vn = open("zx-MyCdss.txt")
     vern = vn.readlines
     new_ver = vern[0]
