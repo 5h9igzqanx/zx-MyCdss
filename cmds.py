@@ -14,6 +14,7 @@ def welcome():
     print("You can enter some commands after \">>\" or ask me some questions.")
     print("If you are not familiar with it, you can search \"2109511809\" on QQ to find me, or enter \"Help\" after \">>\" to get help documents.")
     print("If you want to exit, you can enter \"exit\" after \">>\", or press the close button at y")
+    time.sleep(0.1)
     input_z()
 def input_z():
     input_zz = input('>>')
@@ -23,9 +24,9 @@ def input_z():
 def judge_z(input_zz):
     if input_zz == "":
         pass
-    elif input_zz == "exit" or input_zz == "bye" or input_zz == "退出":
-        z_sys.exit(input_zz=input_zz)
-    elif input_zz == "Help" or input_zz == "help":
+    elif input_zz in ["exit","bye","quit","退出"]:
+        z_sys.exit()
+    elif  input_zz in ["Help","help"]:
         z_sys_hp.z_help()
     elif input_zz == "A" or input_zz == "a":
         z_sys.a()
@@ -59,6 +60,8 @@ def judge_z(input_zz):
         z_sys.o()
     elif input_zz == "P" or input_zz == "p":
         z_sys.p()
+    elif input_zz in ["practice","practise","Practice","Practise"]:
+        z_sys.practice()
     elif input_zz == "Q" or input_zz == "q":
         z_sys.q()
     elif input_zz == "R" or input_zz == "r":
@@ -80,5 +83,5 @@ def judge_z(input_zz):
     elif input_zz == "Z" or input_zz == "z":
         z_sys.z()
     else:
-        z_sys.no_command()
+        z_sys.no_command(input_zz)
     input_z()

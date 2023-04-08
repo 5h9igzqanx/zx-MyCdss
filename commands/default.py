@@ -4,9 +4,9 @@
 
 
 # imports
-import time,os,sys
+import time,os,sys,wget
 # ========================
-# special symbols
+# special symbols ( Well,Python doesn't seem to support special symbols. )
 
 # =============================================================
 # A
@@ -28,16 +28,8 @@ def d():
 # E
 def e():
     print("∟ edysjsi114514")
-def exit(input_zz):
-    if input_zz == "bye":
-        print("∟ See you!")
-        time.sleep(0.5)
-    elif input_zz == "pause":
-        print("paused")
-        time.sleep(0.5)
-    else:
-        print("∟",input_zz, "okay")
-        time.sleep(0.5)
+def exit():
+    print("∟ See you!")
     sys.exit(0)
 # =============================================================
 # F
@@ -75,8 +67,8 @@ def m():
 # N
 def n():
     print("∟ nxiwlaz114514")
-def no_command():
-    print("∟ Sorry, this command does not appear in your definition document, or we do not support this command.")
+def no_command(input_zz):
+    print("∟ Sorry, this command \"" + input_zz + "\" does not appear in your definition document, or we do not support this command.")
     print("∟ You can try to re-enter this command or customize this command or enter \"help\" after \">>\" for help.")
 # =============================================================
 # O
@@ -95,6 +87,16 @@ def o():
 # P
 def p():
     print("∟ psabxgz114514")
+def practice():
+    print("∟ This is a command for you to practice.")
+    print("∟ As the name suggests, this command can help you understand this software.")
+    print("∟ If you want to present, please enter 'Present' below; If this is your first time using it, please enter 'Learn' below.")
+    time.sleep(0.1)
+    model = input(">>")
+    if model in ["Present","present"]:
+        uncultivated()
+    elif model in ["Learn","learn"]:
+        uncultivated()
 # =============================================================
 # Q
 def q():
@@ -115,6 +117,12 @@ def t():
 # U
 def u():
     print("∟ uanxhzl114514")
+def update():
+    import package.update as upd_z
+    upd_z.update(1)
+def uncultivated():  # This isn't a command!
+    print("∟ We don't seem to have this feature yet, haven't you updated it?")
+    print("∟ If you have the latest version, please look forward to our update and thank you for your support.")
 # =============================================================
 # V
 def v():
