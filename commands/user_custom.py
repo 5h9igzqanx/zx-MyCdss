@@ -1,9 +1,9 @@
-# Here is the user-defined command definition document.
-# If you are familiar with Python programming language, you can make some commands by yourself here.
-# However, if you are not familiar with the Python programming language, I am sorry that you cannot modify the content here without authorization.
-# I suggest you use the first letter to classify your commands in the document, so that you can easily modify your bugs.
-# Don't forget to define it in document "cmds.py" after writing, or it will sleep forever.
-# Your show time now!
+# 这是用户定义的命令定义文档
+# 如果您熟悉Python编程语言，您可以在这里自己制作一些命令
+# 但是，如果您不熟悉Python编程语言，很抱歉您无法修改此处的内容
+# 我建议您使用第一个字母对文档中的命令进行分类，这样您就可以轻松地Debug
+# 写完之后不要忘记在文档“cmds.py”中定义它，否则它将永远不会派上用场
+# 现在开始您的展示吧
 
 
-# imports
+# 导入

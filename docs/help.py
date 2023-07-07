@@ -1,14 +1,13 @@
 import time,os
 import cmds as z_exitcmd
 def z_help():
-    print("∟ help")
-    print("∟ You can get help here.")
-    print("∟ If you want to view the help document, enter \"docs\" after \"help>>\".")
+    print("∟ 您可以在这里得到帮助。")
+    print("∟ 如果要查看帮助文档，请在\"help>>\"之后输入\"docs\"。")
     z_help_input()
 def z_help_input():
-    hp_input = input("help>>")  
+    hp_input = input(">>help>")  
     while hp_input == "":
-        hp_input = input("help>>")
+        hp_input = input(">>help>")
     hp_jduge(hp_input)
 def hp_jduge(hp_input):
     if hp_input in["docs","help"]:

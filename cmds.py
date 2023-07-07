@@ -9,12 +9,13 @@ import commands.default as z_sys
 import commands.user_custom as z_user
 import docs.help as z_sys_hp
 def welcome():
-    print("Welcome!")
-    print("As you can see, this is a particularly simple console applet.")
-    print("You can enter some commands after \">>\" or ask me some questions.")
-    print("If you are not familiar with it, you can search \"2109511809\" on QQ to find me, or enter \"Help\" after \">>\" to get help documents.")
-    print("If you want to exit, you can enter \"exit\" after \">>\", or press the close button at y")
-    time.sleep(0.1)
+    print("欢迎！")
+    time.sleep(1)
+    print("正如您所看到的，这是一个特别简单的命令行终端")
+    print("您可以在\">>\"之后输入一些命令或问我一些问题。")
+    print("如果您不熟悉它，您可以在QQ上搜索\"2109511809\"来找我，或者在\">>\"之后输入\"help\"来获取帮助文档。")
+    print("如果您想退出，您可以在\">>\"之后输入\"exit\"或按右上角的关闭按钮")
+    time.sleep(1)
     input_z()
 def input_z():
     input_zz = input('>>')
@@ -68,8 +69,12 @@ def judge_z(input_zz):
         z_sys.r()
     elif input_zz == "S" or input_zz == "s":
         z_sys.s()
+    elif input_zz == "system":
+        z_sys.system()
     elif input_zz == "T" or input_zz == "t":
         z_sys.t()
+    elif input_zz == "test":
+        z_sys.test()
     elif input_zz == "U" or input_zz == "u":
         z_sys.u()
     elif input_zz == "V" or input_zz == "v":
