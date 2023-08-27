@@ -12,9 +12,9 @@ def welcome():
     print("欢迎！")
     time.sleep(1)
     print("正如您所看到的，这是一个特别简单的命令行终端")
-    print("您可以在\">>\"之后输入一些命令或问我一些问题。")
-    print("如果您不熟悉它，您可以在QQ上搜索\"2109511809\"来找我，或者在\">>\"之后输入\"help\"来获取帮助文档。")
-    print("如果您想退出，您可以在\">>\"之后输入\"exit\"或按右上角的关闭按钮")
+    print("*您可以在\">>\"之后输入一些命令以达成你的一些目的。")
+    print("*如果您对它有问题，您可以在\">>\"之后输入\"help\"来获取帮助文档，或者在\"https://5h9igzqanx.github.io/TRDWBST\"联系作者。")
+    print("*如果您想退出，您可以在\">>\"之后输入\"exit\"或点击右上角的关闭按钮")
     time.sleep(1)
     input_z()
 def input_z():
@@ -25,16 +25,17 @@ def input_z():
 def judge_z(input_zz):
     if input_zz == "":
         pass
-    elif input_zz in ["exit","bye","quit","退出"]:
+    elif input_zz in ["exit","quit","退出"]:
         z_sys.exit()
-    elif  input_zz in ["Help","help"]:
+    elif input_zz in ["Help","help"]:
         z_sys_hp.z_help()
-    elif input_zz in ["practice","practise","Practice","Practise"]:
+    elif input_zz in ["practice","practise"]:
         z_sys.practice()
-    elif input_zz == "system":
-        z_sys.system()
-    elif input_zz == "test":
+    elif input_zz in ["test"]:
         z_sys.test()
+    elif input_zz in ["tool"]:
+        z_sys.tool()
     else:
         z_sys.no_command(input_zz)
+    print()
     input_z()
