@@ -132,12 +132,14 @@ def tool():
     print("→ 请选择类别...")
     print("→ *[system,user,...]")
     i = input(">tool>>")
-    while i not in ["system","user"]:
+    while i not in ["system","user","exit"]:
         i = input(">tool>>")
     if i in["system"]:
         tool_system()
     elif i in ["user"]:
         uncultivated()# TODO 还没做好
+    elif i in ["exit"]:
+        pass
 def tool_system():                       #附属于 tool()
     print("→   这里是系统工具\n→   这里备了一些常用的系统命令，所以您不用再东跑西跑了")
     print("→   请选择您想执行的任务...")
