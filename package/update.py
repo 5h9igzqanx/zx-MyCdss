@@ -26,7 +26,7 @@ def update(mode):
         if mode == 0:
             pass
         elif mode == 1:
-            print("→ No update.")
+            print("↓→No update.")
     print()
     time.sleep(0.1)
 update(1)
