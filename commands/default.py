@@ -92,7 +92,7 @@ def m():
 def n():
     print("↓→nxiwlaz114514")
 def noCommand(input_zz):                #不附属于任何命令
-    print(colorama.Fore.YELLOW + "↓→很抱歉,此命令 \"{0}\" 未出现在您的定义文档中,或者我们不支持此命令\n→→您可以尝试重新输入此命令或在\"user_costom.py\"自定义此命令,或在\">>\"后输入\"help\"以获取帮助".format(input_zz))
+    print(colorama.Fore.YELLOW + "↓→很抱歉,此命令 \"{0}\" 未出现在您的定义文档中,或者我们不支持此命令\n→→您可以尝试重新输入此命令或在\"user_custom.py\"自定义此命令,或在\">>\"后输入\"help\"以获取帮助".format(input_zz))
 # ==================================================================================================
 # O
 def o():

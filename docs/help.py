@@ -13,14 +13,14 @@ def hp_jduge(hp_input):
         def docs():
             f = open("docs\\help.txt",encoding='utf-8')
             x = f.read()
-            print(colorama.Fore.RED + "↓→  以下是帮助文档的内容\n")
+            print(colorama.Fore.RED + "↓--→以下是帮助文档的内容\n")
             print(x)
-            print(colorama.Fore.RED + "↓→  以上是帮助文档的内容\n")
+            print(colorama.Fore.RED + "\n↓--→以上是帮助文档的内容")
             f.close()
         docs()
         #z_help_input()
     elif hp_input in ["exit","bye","quit","退出"]:
-        print(colorama.Fore.RED + "↓--→您退出了\"帮助\",请继续使用")
+        print(colorama.Fore.RED + "↓→您退出了\"帮助\",请继续使用")
         time.sleep(1)
         return
     elif hp_input in ["about","关于"]:
