@@ -38,6 +38,27 @@ def exit():                              #系统退出
 # F
 def f():
     print("↓→fsialxq114514")
+def fIle():
+    print(colorama.Fore.RED + "↓→这是一个文件操作命令\n↓→你可以在这里对你的文件进行一些操作")
+    directory = input(colorama.Fore.GREEN + "↓→请选择一个目录>>" + colorama.Fore.BLUE)
+    while (not(os.path.exists(directory))) or directory in ["exit"]:
+        if directory in ["exit"]:
+            deselect(0)
+            return
+        directory = input(colorama.Fore.GREEN + "↓→目录无效,请重新选择>>" + colorama.Fore.BLUE)
+    print(colorama.Fore.YELLOW + "↓→请选择你想执行的任务...")
+    print(colorama.Fore.YELLOW + "↓*[...]")
+    i = input(colorama.Fore.GREEN + ">file>>" + colorama.Fore.BLUE)
+    while i not in ["exit"]:
+        i = input(colorama.Fore.GREEN + ">file>>" + colorama.Fore.BLUE)
+    if i in["114514"]:
+        uncultivated()
+    elif i in []:
+        fIle_delete(directory = directory)
+    elif i in ["exit"]:
+        deselect(0)
+def fIle_delete(directory):              #附属于 fIle()
+    uncultivated()
 # ==================================================================================================
 # G
 def g():
@@ -70,7 +91,7 @@ def m():
 # N
 def n():
     print("↓→nxiwlaz114514")
-def no_command(input_zz):                #不附属于任何命令
+def noCommand(input_zz):                #不附属于任何命令
     print(colorama.Fore.YELLOW + "↓→很抱歉,此命令 \"{0}\" 未出现在您的定义文档中,或者我们不支持此命令\n→→您可以尝试重新输入此命令或在\"user_costom.py\"自定义此命令,或在\">>\"后输入\"help\"以获取帮助".format(input_zz))
 # ==================================================================================================
 # O
@@ -93,9 +114,9 @@ def practice():
     print(colorama.Fore.RED + "↓→这条命令用于您练习\n↓→顾名思义,此命令可以帮助您熟悉此软件")
     print(colorama.Fore.YELLOW + "↓*如果您想练习,请在下面输入\"present\"；如果这是您第一次使用它,请在下面输入\"learn\"")
     time.sleep(0.1)
-    i = input(colorama.Fore.GREEN + ">practice>>")
+    i = input(colorama.Fore.GREEN + ">practice>>" + colorama.Fore.BLUE)
     while i not in ["present","learn","exit"]:
-        i = input(colorama.Fore.GREEN + ">practice>>")
+        i = input(colorama.Fore.GREEN + ">practice>>" + colorama.Fore.BLUE)
     if i in ["present"]:
         uncultivated()
     elif i in ["learn"]:
@@ -134,9 +155,9 @@ def tool():
     print(colorama.Fore.RED + "↓→这里有一些工具,其中的一些可能会帮到您")
     print(colorama.Fore.YELLOW + "↓→请选择类别...")
     print(colorama.Fore.YELLOW + "↓*[system,user,...]")
-    i = input(colorama.Fore.GREEN + ">tool>>")
+    i = input(colorama.Fore.GREEN + ">tool>>" + colorama.Fore.BLUE)
     while i not in ["system","user","exit"]:
-        i = input(colorama.Fore.GREEN + ">tool>>")
+        i = input(colorama.Fore.GREEN + ">tool>>" + colorama.Fore.BLUE)
     if i in["system"]:
         tool_system()
     elif i in ["user"]:
@@ -147,9 +168,9 @@ def tool_system():                       #附属于 tool()
     print(colorama.Fore.RED + "↓--→这里是系统工具\n↓--→这里备了一些常用的系统命令,所以您不用再东跑西跑了")
     print(colorama.Fore.YELLOW + "↓--→请选择您想执行的任务...")
     print(colorama.Fore.YELLOW + "↓  *[shutdown,open,...]")
-    i = input(colorama.Fore.GREEN + ">tool>system>>")
+    i = input(colorama.Fore.GREEN + ">tool>system>>" + colorama.Fore.BLUE)
     while i not in ["shutdown", "open","exit"]:
-        i = input(colorama.Fore.GREEN + ">tool>system>>")
+        i = input(colorama.Fore.GREEN + ">tool>system>>" + colorama.Fore.BLUE)
     if i in ["shutdown"]:
         tool_system_shutdown()
     elif i in ["open"]:
@@ -160,9 +181,9 @@ def tool_system_open():                  #附属于 tool_system()
     print(colorama.Fore.RED + "↓----→这里可以打开一些系统管理程序,或许在计算机被勒索时可以用?")
     print(colorama.Fore.YELLOW + "↓----→选择您想打开的系统管理程序")
     print(colorama.Fore.YELLOW + "↓    *[taskmgr,regedit,...]")
-    j = input(colorama.Fore.GREEN + ">tool>system>open>>")
+    j = input(colorama.Fore.GREEN + ">tool>system>open>>" + colorama.Fore.BLUE)
     while j not in ["taskmgr", "regedit","exit"]:
-        j = input(colorama.Fore.GREEN + ">tool>system>open>>")
+        j = input(colorama.Fore.GREEN + ">tool>system>open>>" + colorama.Fore.BLUE)
     if j in ["taskmgr", "任务管理器"]:
         print(colorama.Fore.YELLOW + "→----→执行成功")
         os.system("taskmgr.exe")
@@ -175,13 +196,13 @@ def tool_system_shutdown():              #附属于 tool_system()
     print(colorama.Fore.RED + "↓----→这条命令用于关机等命令的执行,但注意\"…等命令…\",额……\n↓---→所以您是想关机还是想进行其他类似的命令(注销,睡眠)")
     print(colorama.Fore.YELLOW + "↓----→请选择你想执行的任务...")
     print(colorama.Fore.YELLOW + "↓    *[shutdown,restart,logoff,sleep]")
-    i = input(colorama.Fore.GREEN + ">tool>system>shutdown>>")
+    i = input(colorama.Fore.GREEN + ">tool>system>shutdown>>" + colorama.Fore.BLUE)
     while i not in ["shutdown", "restart", "logoff", "sleep","exit"]:
-        i = input(colorama.Fore.GREEN + ">tool>system>shutdown>>")
+        i = input(colorama.Fore.GREEN + ">tool>system>shutdown>>" + colorama.Fore.BLUE)
     if i in ["shutdown"]:
-        j = input(colorama.Fore.GREEN + "↓------→确定关机吗(y/n)>>")
+        j = input(colorama.Fore.GREEN + "↓------→确定关机吗(y/n)>>" + colorama.Fore.BLUE)
         while j in ["y", "Y", "n", "N"]:
-            j = input(colorama.Fore.GREEN + "↓------→确定关机吗(y/n)>>")
+            j = input(colorama.Fore.GREEN + "↓------→确定关机吗(y/n)>>" + colorama.Fore.BLUE)
         if j in ["y", "Y"]:
             print(colorama.Fore.RED + "↓------→5秒后关机")
             time.sleep(5.5)
@@ -189,9 +210,9 @@ def tool_system_shutdown():              #附属于 tool_system()
         elif j in ["n", "N"]:
             deselect(3)
     elif i in ["restart"]:
-        j = input(colorama.Fore.GREEN + "↓------→确定重启吗(y/n)>>")
+        j = input(colorama.Fore.GREEN + "↓------→确定重启吗(y/n)>>" + colorama.Fore.BLUE)
         while j in ["y", "Y", "n", "N"]:
-            j = input(colorama.Fore.GREEN + "↓------→确定重启吗(y/n)>>")
+            j = input(colorama.Fore.GREEN + "↓------→确定重启吗(y/n)>>" + colorama.Fore.BLUE)
         if j in ["y", "Y"]:
             print(colorama.Fore.RED + "↓------→5秒后重启")
             time.sleep(5.5)
@@ -199,9 +220,9 @@ def tool_system_shutdown():              #附属于 tool_system()
         elif j in ["n", "N"]:
             deselect(3)
     elif i in ["logoff"]:
-        j = input(colorama.Fore.GREEN + "↓------→确定注销吗(y/n)>>")
+        j = input(colorama.Fore.GREEN + "↓------→确定注销吗(y/n)>>" + colorama.Fore.BLUE)
         while j in ["y", "Y", "n", "N"]:
-            j = input(colorama.Fore.GREEN + "↓------→确定注销吗(y/n)>>")
+            j = input(colorama.Fore.GREEN + "↓------→确定注销吗(y/n)>>" + colorama.Fore.BLUE)
         if j in ["y", "Y"]:
             print(colorama.Fore.RED + "↓------→5秒后注销")
             time.sleep(5.5)
@@ -209,9 +230,9 @@ def tool_system_shutdown():              #附属于 tool_system()
         elif j in ["n", "N"]:
             deselect(3)
     elif i in ["sleep"]:
-        j = input(colorama.Fore.GREEN + "↓------→确定睡眠此电脑吗(y/n)>>")
+        j = input(colorama.Fore.GREEN + "↓------→确定将此电脑设定为睡眠状态吗(y/n)>>" + colorama.Fore.BLUE)
         while j in ["y", "Y", "n", "N"]:
-            j = input(colorama.Fore.GREEN + "↓------→确定睡眠此电脑吗(y/n)>>")
+            j = input(colorama.Fore.GREEN + "↓------→确定将此电脑设定为睡眠状态吗(y/n)>>" + colorama.Fore.BLUE)
         if j in ["y", "Y"]:
             print(colorama.Fore.RED + "↓------→5秒后睡眠此电脑")
             time.sleep(5.5)

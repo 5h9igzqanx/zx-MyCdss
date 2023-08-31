@@ -20,9 +20,9 @@ def welcome():
     time.sleep(1)
     input_z()
 def input_z():
-    input_zz = input(colorama.Fore.GREEN + '>>')
+    input_zz = input(colorama.Fore.GREEN + '>>' + colorama.Fore.BLUE)
     while not (input_zz):
-        input_zz = input(colorama.Fore.GREEN + '>>')
+        input_zz = input(colorama.Fore.GREEN + '>>' + colorama.Fore.BLUE)
     judge_z(input_zz)
 def judge_z(input_zz):
     if not (input_zz):
@@ -31,6 +31,8 @@ def judge_z(input_zz):
         z_dft.exit()
     elif input_zz in ["Help","help","帮助"]:     #内置命令:帮助
         z_dft_hp.z_help()
+    elif input_zz in["file"]:
+        z_dft.fIle()
     elif input_zz in ["practice","practise"]:
         z_dft.practice()
     elif input_zz in ["test"]:
@@ -40,6 +42,6 @@ def judge_z(input_zz):
     elif input_zz in ["毁灭地球","核弹","爆炸"]:
         z_dft.rickroll()
     else:
-        z_dft.no_command(input_zz)
+        z_dft.noCommand(input_zz)
     print(colorama.Fore.GREEN + "↓")
     input_z()
