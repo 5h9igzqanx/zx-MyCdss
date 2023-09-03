@@ -31,7 +31,7 @@ def judge_z(input_zz):
         z_dft.exit()
     elif input_zz in ["Help","help","帮助"]:     #内置命令:帮助
         z_dft_hp.z_help()
-    elif input_zz in["file"]:
+    elif input_zz in ["file"]:
         z_dft.fIle()
     elif input_zz in ["practice","practise"]:
         z_dft.practice()
@@ -39,6 +39,8 @@ def judge_z(input_zz):
         z_dft.test()
     elif input_zz in ["tool"]:
         z_dft.tool()
+    elif input_zz in ["widget"]:
+        z_dft.widget()
     elif input_zz in ["毁灭地球","核弹","爆炸"]:
         z_dft.rickroll()
     else:
