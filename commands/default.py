@@ -4,7 +4,7 @@
 # ==================================================================================================================================================
 # ==================================================================================================================================================
 # 导入
-import time,datetime,os,sys,wget,webbrowser,colorama,contextlib,random,tkinter
+import colorama,contextlib,datetime,os,random,sys,time,tkinter,webbrowser,wget
 # ========================
 # 初始化
 with contextlib.redirect_stdout(None):          #关于pygame库
