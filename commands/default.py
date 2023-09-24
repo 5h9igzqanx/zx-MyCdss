@@ -1,14 +1,14 @@
-# 这是内置的命令定义文档
-# 如果您不是专业人士,请不要修改这里的文件,这可能会伤害您的电脑！
-# 展示时间
+"""
+这是内置的命令定义文档
+如果您不是专业人士,请不要修改这里的文件,这可能会伤害您的电脑！
+展示时间
+"""
 # ==================================================================================================================================================
 # ==================================================================================================================================================
 # 导入
-import colorama,contextlib,datetime,os,random,sys,time,tkinter,webbrowser,wget
+import colorama,contextlib,datetime,os,random,sys,threading,time,tkinter,webbrowser,wget
 # ========================
 # 初始化
-with contextlib.redirect_stdout(None):          #关于pygame库
-    import pygame
 # ========================
 # 特殊符号
 # ==================================================================================================
@@ -17,7 +17,7 @@ def a():
     output(0,0,"aassxsw114514")
     output(1,0,"aassxsw114514")
     output(0,1,"aassxsw114514")
-def ask(text:str="",type:int=0,*note):
+def ask(text:str="",type:int=0):
     i = input(colorama.Fore.GREEN + text + ">>" + colorama.Fore.BLUE)
     if type == 0:
         while not(i):
@@ -31,13 +31,24 @@ def ask(text:str="",type:int=0,*note):
 # B
 def b():
     print("↓→bseuxqy114514")
+def bell():
+    output(0,0,"忙里偷闲,苦中作乐")
+    while True:
+        print("\a")
+        time.sleep(1)
+        i = ask("bell",0)
+        if i in ["exit"]:
+            deselect()
+            break
+        else:
+            pass
 # ==================================================================================================
 # C
 def c():
     print("↓→chyewiq114514")
 def choose(level:int=0,text:str=""):
     if not(text):
-        errors("ValueError","byd你整个选择不加问题是吧")
+        errors("Va","byd你整个选择不加问题是吧")
         return False
     i = colorama.Fore.GREEN + "↓" + int(level) * "--" + "→" + text + "(y/n)>>" + colorama.Fore.BLUE
     choose = input(i)
@@ -60,16 +71,16 @@ def deselect(level:int=0):                      #附属于任何带有"exit"的e
 # E
 def e():
     print("↓→edysjsi114514")
-def errors(error_value:str="ValueError",describe:str="情报有诈"):
+def errors(error_value:str="Va",describe:str="情报有诈"):
     describe = "\n" + describe + "\n如果您是用户,请上报作者"
-    if error_value in ["ValueError"]:
+    if error_value in ["Va"]:
         raise ValueError(describe)
-    elif error_value in["UserWaring"]:
+    elif error_value in["Us"]:
         raise UserWarning(describe)
 def exit():                                     #系统退出
     output(0,0,"再见")
     time.sleep(1)
-    sys.exit(0)
+    os._exit(0)
 # ==================================================================================================
 # F
 def f():
@@ -145,18 +156,20 @@ def o():
     time.sleep(2.4)
     print("↓→\"좋아 zoom zoom good\"")
 def output(type:int=0,level:int=0,text:str=""):#附属于 print()
+    #colorama.init(autoreset=False)
     def describe(level=level,text=text):
         print(colorama.Fore.RED + "↓" + level * "--" + "→" + text)
     def prompt(level=level,text=text):
         print(colorama.Fore.YELLOW + "↓" + level * "--" + "" + text)
     if not(text):
-        errors("ValueError","byd你整个空的输出是吧,你还不胜直接\"print()\"呢")
+        errors("Va","byd你整个空的输出是吧,你还不胜直接\"print()\"呢")
     if type == 0:
         describe()
     elif type == 1:
         prompt()
     else:
-        errors("ValueError","\"Type\"参数仅支持传入0到1以内的数值")
+        errors("Va","\"Type\"参数仅支持传入0到1以内的数值")
+    #colorama.init(autoreset=True)
 # ==================================================================================================
 # P
 def p():
@@ -310,19 +323,23 @@ def widget():
     output(0,0,"这条命令能够召唤一些窗口小组件,让您能在一个窗口内实现一组事情")
     output(0,0,"您可以点击窗口右上角的\"X\"来退出")
     output(1,0,"请选择你想打开的小组件")
+    T_widget_clock=threading.Thread(target=widget_clock)
+    T_widget_random=threading.Thread(target=widget_random)
     output(1,0,"[clock,random,...]")
     i = ask(">widget",0)
     while i not in ["clock","random","exit"]:
         i = ask(">widget", 0)
     if i in["clock"]:
-        widget_clock()
+        T_widget_clock.start()
     elif i in["random"]:
-        widget_random()
+        T_widget_random.start()
     elif i in["exit"]:
         deselect(0)
+    output(0,0,"小组件已被召唤,点击窗口右上角的\"X\"来退出")
+    output(0,0,"您可以继续使用")
 def widget_clock():
     screen = tkinter.Tk()
-    screen.title("丑的牛逼的窗口")
+    screen.title("小组件窗口")
     #screen.attributes("-alpha",0.7)
     screen.attributes("-topmost",True)
     label = tkinter.Label(screen,text="11:45:14",font=('Arial',108),fg="#75aac8",bg="#cadeea")
@@ -343,7 +360,7 @@ def widget_clock():
     screen.mainloop()
 def widget_random():
     screen = tkinter.Tk()
-    screen.title("丑的牛逼的窗口")
+    screen.title("小组件窗口")
     #screen.attributes("-alpha",0.7)
     screen.attributes("-topmost",True)
     label = tkinter.Label(screen,text="9999999999999999999",font=('Arial',54),fg="#75aac8",bg="#cadeea")

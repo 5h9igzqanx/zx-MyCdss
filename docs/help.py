@@ -1,3 +1,7 @@
+"""
+这里为帮助,主要存一些帮助信息
+若非必要,请勿鸟它!
+"""
 import time,os,webbrowser,colorama
 def z_help():
     print(colorama.Fore.RED + "↓→您可以在这里得到帮助")

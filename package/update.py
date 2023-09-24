@@ -1,3 +1,8 @@
+"""
+这里是软件自动更新程序,主要为自动获取更新和下载安装包
+但是不知道由于什么原因报错信息上面会有"HTTP Error 404:Not Found",所以我就先禁用了
+"""
+
 import time,os,sys,wget
 def update(mode):
     old_ver = "0.1.4-beta"#version

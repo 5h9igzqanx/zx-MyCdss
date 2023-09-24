@@ -1,22 +1,26 @@
-# Here is the command definition document.
-# Here you can manage what commands to enter before using them.
-# System defined commands and user-defined commands can be defined here.
-# If you have customized a command, please add it here. However, you cannot modify (not create) the code in any case!!!
+"""
+这里是命令定义文档
+您可以在这里管理在使用命令之前要输入的命令
+在此处定义的是系统定义的命令和用户定义的命令
+如果您已经自定义了一个命令,请将其添加到此处.但是,无论如何都不要修改(不是创建)代码!!!
+"""
 
 
 import time,os,sys,colorama
-#from colorama import Fore,Back,Style,init
 import commands.default as z_dft
 import commands.user_custom as z_user
 import docs.help as z_dft_hp
 def welcome():
-    colorama.init(autoreset = True)
-    print(colorama.Fore.RED + "欢迎！")
+    colorama.init(autoreset=False)
+    for i in [colorama.Fore.RED,"欢","迎","!\n"]:
+        print(i,end="",flush=True)
+        time.sleep(0.02)
     time.sleep(1)
-    print(colorama.Fore.RED + "正如您所看到的,这是一个特别简单的命令行终端")
-    print(colorama.Fore.YELLOW + "*您可以在\">>\"之后输入一些命令以达成你的一些目的")
-    print(colorama.Fore.YELLOW + "*如果您对它有问题,您可以在\">>\"之后输入\"help\"来获取帮助文档,或者在\"https://5h9igzqanx.github.io/TRDWBST\"联系作者")
-    print(colorama.Fore.YELLOW + "*如果您想退出,您可以在\">>\"之后输入\"exit\"或点击右上角的关闭按钮")
+    welcome = [colorama.Fore.RED,"正","如","您","看","到","的",",","这","是","一","个","特","别","简","单","的","命","令","行","终","端\n",colorama.Fore.YELLOW,"*您","可","以","在","\">>\"","后","输","入","一","些","命","令","来","达","成","您","的","一","些","目","的\n",colorama.Fore.YELLOW,"*如","果","您","认","为","它","有","问","题",",","您","可","以","在","\">>\"","后","输","入","\"help\"","来","获","取","帮","助","文","档",",","或","在","\"https://github.com/5h9igzqanx/zx-MyCdss/issues\"","联","系","作","者\n",colorama.Fore.YELLOW,"*如","果","您","想","退","出",",","您","可","以","在","\">>\"","后","输","入","\"exit\"",",","或","点","击","右","上","角","的","\"X\"\n"]
+    for i in welcome:
+        print(i,end="",flush=True)
+        time.sleep(0.02)
+    colorama.init(autoreset=True)
     time.sleep(1)
     input_z()
 def input_z():
@@ -25,12 +29,14 @@ def input_z():
         input_zz = input(colorama.Fore.GREEN + '>>' + colorama.Fore.BLUE)
     judge_z(input_zz)
 def judge_z(input_zz):
-    if not (input_zz):
+    if not(input_zz):
         pass
-    elif input_zz in ["exit","quit","退出"]:     #内置命令:退出
+    elif input_zz in ["exit","quit","退出"]:     # 底层命令:退出
         z_dft.exit()
-    elif input_zz in ["Help","help","帮助"]:     #内置命令:帮助
+    elif input_zz in ["Help","help","帮助"]:     # 底层命令:帮助
         z_dft_hp.z_help()
+    elif input_zz in ["bell"]:
+        z_dft.bell()
     elif input_zz in ["file"]:
         z_dft.fIle()
     elif input_zz in ["practice","practise"]:
